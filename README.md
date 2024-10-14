@@ -1,4 +1,4 @@
-# rmusser01's Bountycatch.py remix 🤸
+# rmusser01's Bountycatch.py remix 🧑‍🏭
 
 This repository contains a remix of [adelaramadhina's](https://github.com/adelaramadhina/bountycatchremix) remix of Jason Haddix's  [`bountycatch.py`](https://gist.github.com/jhaddix/91035a01168902e8130a8e1bb383ae1e) script.
 
