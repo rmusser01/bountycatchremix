@@ -49,33 +49,14 @@ Python 3.x
 8. Specify a Custom Database Path:
   * `python3 bountycatch.py add-project --project example.com --db /path/to/custom.db`
 
-Below are the commands available for Bountycatch:
-
-### Adding Subdomains
-To add subdomains for a project:
-
-```bash
-python3 bountycatch.py --project xyz.com --o add --file xyz_subdomains.txt
-```
-### Printing Current Project Data
-To display the current project's subdomains:
-
-```
-python3 bountycatch.py --project xyz.com -o print
-```
-
-### Counting Subdomains
-To count the number of subdomains for the current project:
-
-```
-python3 bountycatch.py --project xyz.com -o count
-```
-
-### Deleting a Subdomain
-To delete a specific subdomain from the project:
-
-```bash
-python3 bountycatch.py --project xyz.com -o delete 
-```
-
-
+## Workflow:
+1. Create/add a new domain - `example.com`: `python3 bountycatch.py add-project -p example.com`
+2. Add subdomains to `example.com`: `python3 bountycatch.py add -p example.com -d "fake.test.com,blue.test.com,cake.test.com,fakecake.test.com"`
+3. Print all subdomains for `example.com`: `python3 bountycatch.py print -p example.com`
+4. Count total amount of subdomains: `python3 bountycatch.py count -p example.com`
+5. Search across all subdomains: `python3 bountycatch.py search -p example.com -q "fake"`
+6. Search across all projects/domains: `python3 bountycatch.py search-projects -q "example"`
+7. Attempt to add duplicate and new subdomains: `python3 bountycatch.py add -p example.com -d "fake.test.com,green.test.com"`
+8. Print newly created 'Total' list of subdomains: `python3 bountycatch.py print -p example.com`
+9. Delete Project: `python3 bountycatch.py delete -p example.com`
+10. Verify Deletion: `python3 bountycatch.py print -p example.com` & `python3 bountycatch.py search-projects -q "example"`
